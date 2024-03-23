@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+FAUSTO
+
+import React, {useEffect, useSate} from 'react';
+
+function App(){
+  cons pokemon [pokemon, setPokemon] = useEstate([]);
+
+function loadAPI(){
+  let url = 'https://pokeapi.co/api/pokemon/pikachu';
+  fetch(url)
+  .then(response => response.json())
+  .then(json => {
+    console.log(json)
+    setPokemon(json)
+  })
+  .catch(err => console.log(err));
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  useEffect(() +> {
+    loadAPI();
+  },[]);
+
+  return(
+    <div className='container'>
+      <header>
+        <strong>Pokemon API</strong>
+      </header>
+    </div>
+  );
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+import clienteRouter from /.routes/cliente.js
+app.user('/clientes', clienteRouter)
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+export default App;

@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;     
+}
+
+.caixa{
+    width: 180px;
+}
+
+.card{
+    background-color: orange;
+    margin: 1%;
+    padding: 1%;
+    box-sizing: border-box;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    height: 60px;
+    background-color: gold;
+    color: white;
+}
